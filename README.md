@@ -1,166 +1,139 @@
-# Take-Home Test: AI & Innovation Manager
+# AI & Innovation Manager: Your First 90 Days
 
-You are the incoming AI & Innovation Manager. Check competing business claims, build a small safe triage prototype, and recommend a practical company AI plan. We assess judgment, safety, delivery and leadership.
+We want a leader who identifies opportunities and helps the whole company use AI productively. Recommend a direction, explain its value and show how you would deliver it.
 
-All data is made up.
+All company information and data in this exercise are fictional.
 
-## Start here
+## 1. Start here
 
-1. Read the scenario, policies and tasks below.
-2. Review the four supplied files using [DATA_GUIDE.md](DATA_GUIDE.md).
-3. Complete all six tasks. The table below maps each task to its deliverables.
-4. Use [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for output formats and the final checklist.
+1. Read the scenario and company policies below.
+2. Inspect the four supplied files using [DATA_GUIDE.md](DATA_GUIDE.md).
+3. Complete the six tasks. Use [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for file formats and the final checklist.
+4. Make your own recommendations. The requests are stakeholder suggestions, not an approved roadmap.
 
-| Task | Deliverables | Suggested time |
-|---|---|---|
-| 1. Check the data | FINDINGS.md and analysis/ | 15 min |
-| 2. Safe triage prototype | src/, tests/ and three files in out/ | 55 min |
-| 3. Company AI plan | PLAN.md | 40 min |
-| 4. Vendor and request decisions | Appendices A and B in MEMO.md | 30 min |
-| 5. Management memo | Opening section of MEMO.md | 10 min |
-| 6. Explain your work | Your README.md and AI_USAGE.md | 10 min |
+| Task | Deliverable | Flexible time guide | Points |
+|---|---|---|---|
+| 1. Establish the facts | FINDINGS.md and analysis/ | 25 min | 10 |
+| 2. Demonstrate hands-on judgment | src/, tests/, out/ | 50 min | 20 |
+| 3. Propose your company AI plan | PLAN.md | 65 min | 40 |
+| 4. Make investment decisions | Appendices A and B in MEMO.md | 40 min | 15 |
+| 5. Recommend a direction to management | Opening of MEMO.md | 20 min | 10 |
+| 6. Explain and verify your work | Your README.md and AI_USAGE.md | 20 min | 5 |
 
-Allow another 20 minutes to read and set up. No UI, live integrations or cloud deployment are required.
+Allow 20 minutes for reading and setup. Expected effort is 3-4 hours; stop at four hours and disclose unfinished work. Adjust the allocations as needed. Submit within five calendar days of receiving the assignment.
 
-## Time and Cost
+Use free or local tools. No paid AI key, Lark account, cloud deployment or UI is required. The run command must work offline; documentation, AI and translation tools may be used during preparation. Mock external systems. AI use is optional and does not affect your score.
 
-- Time: aim for 180 minutes, including 20 to read and set up. Stop at 210 minutes and list unfinished work. Suggested task times are flexible; do not build a production system.
-- Submit within 5 days, weekends included.
-- Use only free or local (on your computer) tools, not n8n Cloud (paid). You need no Lark account, paid AI key or credit card.
-- Mock (fake) outside systems, for example save a Lark chat message as a JSON file.
-- An LLM (AI text model) is optional. Code rules alone are a complete answer. Even without an LLM, generate the safe example payloads required in Task 2.
-- The submitted run command must work offline. You may use online documentation, AI or translation tools during preparation.
+## 2. Your situation
 
-## Scenario
+It is Monday 2026-10-12, your first week. Use that date for your plans. You report to the Head of Operations Analysts and lead a four-person team across automation, AI enablement and IT operations.
 
-Monday 2026-10-12, your first week as AI & Innovation Manager. Use this scenario date for plans and deadlines. The company runs a real-money wallet app. Support agents answer customer tickets (help requests) 24/7. Your manager, the Head of Operations Analysts, sends 4 items:
+The company runs a real-money wallet app. Its five teams are Customer Support (CS, operating 24/7), Ops Analysts, Payments & Risk, VIP and Marketing.
 
-1. The Customer Support (CS) lead wants AI ticket triage (sorting tickets into queues) working this month. She says it saves 45 hours a week.
-2. The CEO wants a contract with TriageGenie, a triage vendor (seller): 94% accuracy, working in 2 weeks.
-3. Teams sent 8 automation requests. Your team has 160 build hours for the next 90 days (to 2027-01-10).
-4. Last month's AI report says 78% of staff use AI. The CEO wants every team using AI safely every week, within 90 days.
+You receive these messages:
 
-Some data has errors. Say what you fix or remove, and why.
+- The CS lead wants AI ticket triage this month and claims it will save 45 hours each week.
+- The CEO wants to sign with TriageGenie: 94% accuracy and delivery in two weeks.
+- Teams have submitted eight automation requests. You have 160 build hours for the next 90 days, ending 2027-01-10.
+- Last month's report says 78% of staff use AI. The CEO wants all five teams using AI safely and usefully every week within 90 days.
 
-## Company policies
+Propose what else deserves attention. Evidence is incomplete: distinguish facts, assumptions and unanswered questions.
 
-- **P1.** Customer personal data never leaves our systems unless redacted (hidden) first. This includes AI tools.
-- **P2.** If a customer asks to limit, pause or close their account because of their spending, a human handles it within 24 hours. No automatic reply or account change.
+## 3. Policies and operating facts
 
-## Fact box
+### Company policies
+
+- **P1:** Customer personal data must be redacted before leaving company systems, including through AI tools.
+- **P2:** When a customer asks to limit, pause or close their account because of their spending, a human must handle it within 24 hours. No automatic reply or account change.
+
+### Facts you may use
 
 - Tickets: 720 per week in English, Thai, Vietnamese and Chinese.
 - Ticket queue: 8 agents, USD 7.50 per hour each, 52 weeks a year.
-- Your team: 4 people, USD 25 per hour each.
-- Approved AI tool: WorkAI Team. Cloud, outside our systems, so P1 applies. USD 30 per seat (1 user) per month, 1 seat per staff member. It does not train on our data.
-- If your own build uses an LLM: assume USD 20 a month.
-- Ticket times: channel app_chat is UTC. Channel web_form is GMT+7, dd/mm/yyyy HH:MM.
-- Transaction references: TX + 10 digits.
+- Your team: four people, USD 25 per hour each. You allocate their work.
+- Approved AI tool: WorkAI Team, USD 30 per seat per month, one seat per staff member. It is external cloud software, so P1 applies. It does not train on company data.
+- If your own build uses an LLM (an AI text model), assume USD 20 a month.
+- app_chat timestamps are UTC. web_form timestamps use GMT+7, dd/mm/yyyy HH:MM.
+- Transaction references are TX followed by ten digits.
 
-## Provided data
+The data/ folder contains tickets.csv, ai_seats.csv, requests.csv and vendor_quote.md. Keep all four files unchanged and document any cleaning in your analysis.
 
-The data/ folder contains tickets.csv, ai_seats.csv, requests.csv and vendor_quote.md. See [DATA_GUIDE.md](DATA_GUIDE.md) for their contents and field meanings. Keep these four files unchanged; record cleaning decisions in your analysis.
+## 4. Tasks
 
-## Tasks
+### Task 1. Establish the facts
 
-### Task 1. Check the data first (15 min)
+Deliver FINDINGS.md (max 350 words) and a reproducible script or SQL in analysis/.
 
-Deliver FINDINGS.md (max 400 words) and your script or SQL in analysis/. Answer:
+Assess the management claims with calculations and record IDs/counts. Explain the most urgent issue, its significance and your first business question. Define current AI adoption and the measure's limitations.
 
-1. Data problems: file, row IDs or row count, and what you did.
-2. Which numbers in the Scenario would you give the CEO unchanged? For the others: your number and formula.
-3. The first risk you would report to management today, and why. Then 1 question for the business before triage starts.
+### Task 2. Demonstrate hands-on judgment
 
-### Task 2. Build a safe triage step (55 min)
+Build a small safe triage step using data/tickets.csv. This is a common skills sample; it does not require you to prioritize triage in your 90-day roadmap.
 
-Deliver src/, tests/ and out/. Use any language that meets these requirements:
+Your solution must:
 
-1. Run on data/tickets.csv with one offline command and no API key.
-2. Keep a record of every input row, identify duplicates, and convert timestamps to UTC.
-3. Hide customer personal data before creating any LLM payload. Keep money amounts and transaction references readable. Demonstrate redaction on at least two eligible tickets.
-4. Mark P2 and other human-only tickets with a reason. Never include them in LLM payloads. Explain your human-routing choices.
-5. Treat ticket text as untrusted input, including instructions inside it. No model output may send replies, change accounts or approve money.
-6. Produce out/triage.csv and out/llm_payloads.jsonl using the [exact formats](SUBMISSION_GUIDE.md#task-2-output-formats).
-7. Include at least three automated tests covering two kinds of personal data, multilingual P2 requests and instructions inside tickets. Save the command and full output in out/test_output.txt.
+- run with one offline command and no API key;
+- account for every input row, identify duplicates and convert timestamps to UTC;
+- redact personal data before forming any LLM payload, preserving money amounts and transaction references;
+- identify human-only cases under P2 or your own justified safety rules and exclude them from payloads;
+- treat instructions inside customer messages as untrusted input; model output must not send replies, change accounts or approve money;
+- demonstrate redaction on at least two eligible tickets; and
+- include at least three automated tests covering two kinds of personal data, multilingual P2 requests and instructions inside tickets.
 
-The payload prompt must ask for one label: deposit, withdrawal, account_access, bonus or other. Include the category column in triage.csv; its values may be blank and are not scored. No model call is required.
+Commit out/triage.csv, out/llm_payloads.jsonl and out/test_output.txt using the [output formats](SUBMISSION_GUIDE.md#task-2-output-formats). Generate proposed payloads even without a model call. The prompt must request one label: deposit, withdrawal, account_access, bonus or other. Include the category column, but its values may be blank and are not scored.
 
-In your README.md, add **Deploy in our stack** (max eight lines): where it would run (Lark bot, n8n or Apps Script), where keys would be stored, the LLM failure fallback, the human-queue owner and how overdue P2 cases would be detected. This is a written proposal; implementation is not required.
+Add a short production handoff in your README.md: where it would run, key storage if applicable, failure behavior, human-queue ownership and overdue P2 detection. Explain one important limitation. This is a proposal, not an integration to build.
 
-### Task 3. Company AI plan (40 min)
+### Task 3. Propose your company AI plan
 
-Deliver PLAN.md (max 600 words, table words count). Goal: in 90 days, all 5 teams (CS, Ops Analysts, Payments & Risk, VIP, Marketing) use AI safely and usefully every week. Sections:
+Deliver PLAN.md (max 800 words, including tables) with these four sections. Choose your approach; we have not prescribed an adoption program or a tool rollout.
 
-1. Teams: 1 table row per team: AI use today (from data/ai_seats.csv), first AI task (based on the data), why, owner (job title).
-2. Safe-use rules: allowed data, approved tools, never-use list (things never allowed with AI), when a human must check AI output.
-3. Adoption: how you get each team to use AI every week, without individual prompt quotas.
-4. Delivery: what happens in weeks 1-2, 3-6 and 7-12; a release check and a stop or rollback condition. Name your Data, Product and Security dependencies.
-5. People: how your 4-person team shares delivery, enablement and IT support; 1 coaching or skill-development action.
-6. Targets: week 2, 6 and 12, each measurable. Define weekly adoption, its denominator, and a useful-work or safety measure.
-7. Risks: top 2, 1 action each.
+**A. Opportunities and choices**
 
-### Task 4. Decisions: vendor and requests (30 min)
+Propose two opportunities beyond the eight supplied requests. They must address a different problem or a materially different way of working, not just rename a request or swap its tool. At least one should help more than one team or improve a shared company capability. For each, state the problem and intended users, supporting evidence or assumption, expected value, main risk and the smallest experiment that would test it. Explain how you would discover and validate further needs with staff.
 
-Appendix A in MEMO.md: TriageGenie, max 200 words plus 1 table (not counted):
+Prioritize across your ideas and existing requests; explain deferrals. New ideas need not come first. Both are proposals; only Task 2 requires implementation.
 
-- Decide: buy, pilot (short trial) or do not buy.
-- A 12-month cost table, 3 rows: TriageGenie, own triage build, USD value of triage hours saved. Show formulas and assumptions for setup, support and human review. Distinguish released capacity from cash savings.
-- Conditions that would change your decision.
-- If you pilot: duration and numerical pass targets for safety and quality across the ticket languages, set before it starts (max 3 lines).
+**B. Adoption and useful work**
 
-Appendix B: 1 row per request, with this header:
+Address safe, productive AI use across all five teams: how you would earn participation and respond if use declined. You may challenge or sequence the CEO's weekly-use ambition where evidence supports a better outcome; explain your alternative and measures. Ground your starting point in the data. Define success beyond activity counts. Your two proposed opportunities may also appear here; no separate ideas per team are required.
 
-```
-| req_id | hours saved per week | decision: 90 days, later, no | AI role: none, assists, decides | owner (role) | 1-line reason |
-```
+**C. Execution and leadership**
 
-Below the table: build-hour estimates for selected requests and extra PLAN.md builds, including testing and integration. Total max 160. You may rescope requests if you explain the change and estimate. List training and ongoing support time separately; it does not use this build budget. Avoid double-counting hours saved.
+Set out the first two weeks, the next month and the remaining 90-day period. Include owners, dependencies on Data, Product and Security, your four-person team's responsibilities, one development or coaching action, and a pilot decision rule for continuing, changing or stopping. Show how you protect ongoing IT support while delivering the plan.
 
-### Task 5. Memo (10 min)
+**D. Measures and safeguards**
 
-Top of MEMO.md, above the appendices: a memo of max 250 words to your manager and the CEO. Include:
+Set measurable week-2, week-6 and week-12 targets, define how you will measure them, and address your top two risks. State the data boundaries and human review your plan requires.
 
-- What you deliver first, and when.
-- Hours saved per week: scope (triage or selected portfolio), range (low to high) and method.
-- AI use today (number, definition), week-12 target.
-- Vendor decision.
-- Top 2 risks, 1 action each.
-- 2 things you need from others, each with owner and date.
+### Task 4. Make investment decisions
 
-Use consistent definitions and numbers across FINDINGS.md, PLAN.md and the appendices. Clearly label different scopes, such as triage savings versus total portfolio savings.
+In MEMO.md, include:
 
-### Task 6. README and AI usage (10 min)
+**Appendix A: Vendor decision** (max 150 words plus one table). Recommend buy, pilot or do not buy, with the evidence and conditions that would change your mind. Use a three-row, 12-month cost table: vendor, own triage build and value of triage time saved. Show formulas and assumptions, including support and human review. Separate released capacity from cash savings. If proposing a pilot, state its duration and numerical safety and quality pass criteria.
 
-Deliver your own README.md using the submission checklist, and complete AI_USAGE_TEMPLATE.md as AI_USAGE.md.
+**Appendix B: Portfolio** (one compact table). For each of the eight requests and your two new ideas, show decision (90 days, later or no), AI role (none, assists or decides), estimated weekly benefit, build hours, owner and reason. Unknown benefits may be stated as unknown with a validation method.
 
-## Rules
+Show the selected build-hour total, including testing, integration and any extra builds in PLAN.md: max 160. Explain revised estimates/scope, list training/support effort separately and avoid double-counted benefits.
 
-- AI tools are allowed and encouraged. You may paste this data into them. Do not add real data or commit secrets (API keys, passwords).
-- Honest unfinished work is better than work that hides missing parts.
-- Unsafe data disclosure, P2 automation, unreviewed model actions or committed secrets can disqualify a submission. We assess reasoning and working evidence; extra features and paid tools earn no extra points.
+### Task 5. Recommend a direction to management
 
-## Evaluation
+At the top of MEMO.md, write a memo of max 250 words to your manager and the CEO. Lead with your recommendation and first delivery. Summarize the expected impact and its uncertainty, adoption baseline and week-12 goal, vendor decision, top risks and two requests for support with owners and dates. Keep definitions and numbers consistent with the supporting work.
 
-| Task | Points |
-|---|---|
-| 1. Data findings | 15 |
-| 2. Safe build | 25 |
-| 3. Company AI plan | 25 |
-| 4. Decisions | 20 |
-| 5. Memo | 10 |
-| 6. README and AI usage | 5 |
-| **Total** | **100** |
+### Task 6. Explain and verify your work
 
-## Submission
+Write your own README.md using the submission guide, and complete AI_USAGE_TEMPLATE.md as AI_USAGE.md. Disclose actual time, assumptions, checks and unfinished work.
 
-Follow [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for the repository structure, document limits and final checklist. Write your own README.md in place of this brief; keep a separate copy of the instructions for reference.
+## 5. How we evaluate
 
-Send your own repository link to the recruiter using the access instructions in the submission guide.
+The task weights above total 100. PLAN.md's 40 points cover independent opportunity discovery and experiments (15), useful adoption across teams (10), people leadership (5), execution (5), and safeguards (5).
 
-## Live follow-up
+A strong technical exercise alone is insufficient. To progress, candidates need at least 65/100 overall, 24/40 on the company plan, 8/15 on independent opportunity discovery and 6/10 on adoption, with no serious safety breach. Without a qualifying new opportunity, initiative scores below eight. We assess reasoning, not whether you chose our preferred ideas. We use the interview to verify ownership and explore uncertainty.
 
-The 60-minute interview includes a ten-minute staff presentation, a repo explanation and one small code change. See the submission guide for details.
+Unsafe disclosure, P2 automation, unreviewed model actions or committed secrets can disqualify a submission. Extra features, paid tools, slides and polished UI earn no extra credit. Honest limits are preferable to unsupported claims.
 
-## Questions and assumptions
+## 6. Submit and discuss
 
-Free translation tools are allowed. If something is unclear, state your assumption and continue. Reasoned alternatives are accepted.
+Follow [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for repository access and the final checklist. Send your own repository link to the recruiter. Do not submit a solution as a pull request to this test repository.
+
+The 60-minute follow-up includes a short staff presentation, questions about your decisions and code, one small code change and a discussion of how you would adapt when circumstances change. Normal development tools, including AI, may be used. No slide deck or recording is required.

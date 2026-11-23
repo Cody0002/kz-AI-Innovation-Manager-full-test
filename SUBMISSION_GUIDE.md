@@ -12,7 +12,7 @@ your-submission/
   MEMO.md
   AI_USAGE.md
   analysis/                 # Your data-checking script or SQL
-  src/                      # Your triage implementation
+  src/                      # Your common triage skills sample
   tests/                    # Your automated tests
   out/
     triage.csv
@@ -25,12 +25,12 @@ You may retain the supplied guides and AI usage template. Additional files earn 
 
 | Document | Required content | Limit |
 |---|---|---|
-| README.md | Setup, run and test commands; tools used; what is real or mocked; unfinished work; actual minutes per task; Deploy in our stack | Deployment proposal: eight lines |
-| FINDINGS.md | Answers to Task 1's three questions, supported by your analysis | 400 words |
-| PLAN.md | Task 3's team table, safe-use rules, adoption, delivery, people, targets and risks | 600 words, including tables |
+| README.md | Setup, run and test commands; tools used; real/mocked behavior; assumptions; unfinished work; actual time; production handoff | Keep concise |
+| FINDINGS.md | Evidence, corrected claims, adoption baseline, urgent issue and business question from Task 1 | 350 words |
+| PLAN.md | Task 3's four sections: opportunities/choices, adoption/useful work, execution/leadership, measures/safeguards | 800 words, including tables |
 | MEMO.md: opening | Task 5's memo to management, before the appendices | 250 words |
-| MEMO.md: Appendix A | Vendor decision, cost table, conditions and any pilot targets | 200 words, excluding its one cost table; pilot targets: three lines |
-| MEMO.md: Appendix B | One row per request, build estimates and capacity total | No word limit; keep concise |
+| MEMO.md: Appendix A | Vendor decision, cost table, conditions and any pilot targets | 150 words, excluding its one cost table |
+| MEMO.md: Appendix B | One row per supplied request and proposed idea (ten rows total), estimates and capacity total | No word limit; keep concise |
 | AI_USAGE.md | Completed AI_USAGE_TEMPLATE.md; an honest no-AI submission is accepted | No word limit; short answers are enough |
 
 ## Task 2 output formats
@@ -50,7 +50,7 @@ Include a header and one output row for every input row, in input order, includi
 | human_reason | Why a human is required; blank when must_human is N |
 | category | deposit, withdrawal, account_access, bonus or other; may be blank and is not scored |
 
-Explain your duplicate rule. For duplicate rows, still populate the required fields; a Y value does not mean a second human case must be created.
+Explain your duplicate rule. For duplicate rows, still populate the required fields; a Y value does not mean a second human case must be created. The sample proves hands-on skills and does not require triage to be selected in your business roadmap.
 
 ### out/llm_payloads.jsonl
 
@@ -72,6 +72,14 @@ This example shows the format only. Design your own prompt and safety controls.
 
 Save the exact test command and its full output. At least three automated tests must cover two kinds of personal data, multilingual P2 requests and instructions inside tickets. One test may cover several cases. Report failures honestly.
 
+## Portfolio and experiment scope
+
+Use the existing PLAN.md and Appendix B for your two proposed opportunities. No additional prototype or external research is required. You may add clearly labeled synthetic test fixtures; keep the four supplied source files unchanged. For an unvalidated opportunity, estimate the effort of its first experiment and explain uncertainty. Include selected experiment/build hours in the 160-hour portfolio total. The take-home timebox and this fictional team build budget are different constraints.
+
+## Production handoff
+
+In your README.md, briefly explain where the sample would run, key storage if applicable, failure behavior, human-queue ownership and overdue P2 detection. State one important limitation. You choose the runtime; explain its fit with the scenario. Implementation of live integrations is not required.
+
 ## Repository access
 
 Create your own repository and send its link to your recruiter. Prefer a private repository with read access for the GitHub user they name; a public repository is accepted. Do not open a pull request with your solution in this test repository. If you cannot use GitHub, email them a git bundle.
@@ -89,4 +97,4 @@ Create your own repository and send its link to your recruiter. Prefer a private
 
 ## Live follow-up
 
-The interview lasts 60 minutes. Present PLAN.md as if speaking to staff for ten minutes, explain your code and business decisions, and make one small code change. No separate slide deck or recorded video is required.
+The interview lasts 60 minutes: a ten-minute staff presentation, discussion of your evidence and original ideas, one small code/test change, a changed-business-condition exercise, leadership questions and your questions. Normal development tools, including AI, may be used. We assess understanding and adaptation; no separate slide deck or recorded video is required.
