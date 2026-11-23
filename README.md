@@ -2,7 +2,7 @@
 
 Show how you would find valuable opportunities, lead useful AI adoption across teams and turn your recommendations into a 90-day plan.
 
-All company information and data in this exercise are fictional.
+The business scenario and data are fictional. The company tools listed below reflect our working environment.
 
 ## 1. Start here
 
@@ -47,16 +47,22 @@ Decide what deserves attention. Distinguish facts, assumptions and questions you
 - Tickets: 720 per week in English, Thai, Vietnamese and Chinese.
 - Ticket queue: 8 agents, USD 7.50 per hour each, 52 weeks a year.
 - Your team: four people, USD 25 per hour each. You allocate their work.
-- If your own build uses an LLM (an AI text model), assume USD 20 a month.
+- WorkAI Team is the fictional approved AI tool used in the case and seat data. Assume USD 30 per seat per month and one seat per staff member. It runs outside company systems, so P1 applies. It does not train on company data.
+- If your proposed solution uses an LLM (an AI text model), assume USD 20 a month for the case.
 - app_chat timestamps are UTC. web_form timestamps use GMT+7, dd/mm/yyyy HH:MM.
 - Transaction references are TX followed by ten digits.
 
-### Tools in this scenario
+### Company tools
 
-- WorkAI Team is the approved AI tool. It costs USD 30 per seat per month, with one seat per staff member. The service runs outside company systems, so P1 applies. It does not train on company data.
-- Ops uses BigQuery for reporting and Lark for team communications. IT supports staff access to Google, Lark, WorkAI and internal admin tools.
+| Area | Tools we use |
+|---|---|
+| AI and development | ChatGPT, Codex, Claude, GitHub Copilot and the OpenAI API, which we access with API keys |
+| Data and reporting | BigQuery, Google Sheets and Excel |
+| Automation and integrations | Google Apps Script, JavaScript, Python, APIs and webhooks |
+| Team workflows | Lark for communication and alerts, monday.com for tracking tasks |
+| Hosting | AWS EC2, Ubuntu/Linux and Docker |
 
-Use this context when proposing integrations or changes to staff workflows. State any assumptions about access or capabilities. Build locally in a language of your choice and mock external systems. Keep the four supplied data files unchanged.
+Use this list as context for your plan. Explain any assumptions about access or integrations. Run the prototype offline in a language of your choice and mock external systems. Keep the four supplied data files unchanged.
 
 ## 4. The three modules
 

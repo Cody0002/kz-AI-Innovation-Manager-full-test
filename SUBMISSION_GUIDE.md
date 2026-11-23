@@ -78,7 +78,7 @@ Describe your two proposed opportunities in PLAN.md and list them in Appendix B.
 
 ## Production handoff
 
-In your README.md, explain where the sample would run, how you would store any keys, what happens on failure, who owns the human queue and how they would detect overdue P2 cases. State one important limitation. Use the scenario tools where relevant and document integration assumptions. Describe the production setup in writing and run the prototype locally.
+In your README.md, explain where the sample would run, how you would store any keys, what happens on failure, who owns the human queue and how they would detect overdue P2 cases. State one important limitation. Use the company tools as context for your proposed production setup and state any integration assumptions. Run the prototype offline with the supplied data and mock any external systems.
 
 ## Repository access
 
