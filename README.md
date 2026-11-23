@@ -1,6 +1,26 @@
 # Take-Home Test: AI & Innovation Manager
 
+You are the incoming AI & Innovation Manager. Check competing business claims, build a small safe triage prototype, and recommend a practical company AI plan. We assess judgment, safety, delivery and leadership.
+
 All data is made up.
+
+## Start here
+
+1. Read the scenario, policies and tasks below.
+2. Review the four supplied files using [DATA_GUIDE.md](DATA_GUIDE.md).
+3. Complete all six tasks. The table below maps each task to its deliverables.
+4. Use [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for output formats and the final checklist.
+
+| Task | Deliverables | Suggested time |
+|---|---|---|
+| 1. Check the data | FINDINGS.md and analysis/ | 15 min |
+| 2. Safe triage prototype | src/, tests/ and three files in out/ | 55 min |
+| 3. Company AI plan | PLAN.md | 40 min |
+| 4. Vendor and request decisions | Appendices A and B in MEMO.md | 30 min |
+| 5. Management memo | Opening section of MEMO.md | 10 min |
+| 6. Explain your work | Your README.md and AI_USAGE.md | 10 min |
+
+Allow another 20 minutes to read and set up. No UI, live integrations or cloud deployment are required.
 
 ## Time and Cost
 
@@ -8,7 +28,8 @@ All data is made up.
 - Submit within 5 days, weekends included.
 - Use only free or local (on your computer) tools, not n8n Cloud (paid). You need no Lark account, paid AI key or credit card.
 - Mock (fake) outside systems, for example save a Lark chat message as a JSON file.
-- An LLM (AI text model) is optional. Code rules alone are a complete answer.
+- An LLM (AI text model) is optional. Code rules alone are a complete answer. Even without an LLM, generate the safe example payloads required in Task 2.
+- The submitted run command must work offline. You may use online documentation, AI or translation tools during preparation.
 
 ## Scenario
 
@@ -36,11 +57,9 @@ Some data has errors. Say what you fix or remove, and why.
 - Ticket times: channel app_chat is UTC. Channel web_form is GMT+7, dd/mm/yyyy HH:MM.
 - Transaction references: TX + 10 digits.
 
-## Data
+## Provided data
 
-- data/tickets.csv: a sample of last week's tickets. triage_minutes: time to read and sort. handle_minutes: total handling time.
-- data/ai_seats.csv: 1 row per paid WorkAI seat. prompts_wk_MMDD: prompts in the week starting Monday 2026-MM-DD. other_ai_seen: AI websites or browser extensions in IT's web traffic report, same 4 weeks.
-- data/requests.csv (8 requests) and data/vendor_quote.md (TriageGenie).
+The data/ folder contains tickets.csv, ai_seats.csv, requests.csv and vendor_quote.md. See [DATA_GUIDE.md](DATA_GUIDE.md) for their contents and field meanings. Keep these four files unchanged; record cleaning decisions in your analysis.
 
 ## Tasks
 
@@ -54,17 +73,19 @@ Deliver FINDINGS.md (max 400 words) and your script or SQL in analysis/. Answer:
 
 ### Task 2. Build a safe triage step (55 min)
 
-Deliver src/, tests/ and out/. Your code must:
+Deliver src/, tests/ and out/. Use any language that meets these requirements:
 
-- Run with 1 command on data/tickets.csv, offline, no API key.
-- Write out/triage.csv, 1 row per input row: row_number (1-based, excluding header), ticket_id, created_at_utc (ISO 8601: 2026-01-31T14:05:00Z), status (kept or duplicate), status_reason, must_human (Y/N), human_reason, category. For duplicates, name the earlier row in status_reason.
-- Redact customer personal data before any text goes into an LLM payload (data sent to the LLM). Keep money amounts and transaction references readable.
-- Set must_human = Y (reason in human_reason) for policy P2 or your own decision. Never send these tickets to an LLM. Demonstrate redaction on at least 2 eligible tickets; explain human-routing choices.
-- Write out/llm_payloads.jsonl: 1 JSON line per ticket with status = kept and must_human = N, as it would be sent: ticket_id, prompt, text. Create it even with no LLM. Exclude duplicates and human-only tickets.
-- Treat ticket text as untrusted input, including instructions inside it. No model output may send replies, change accounts or approve money.
-- Your prompt must ask for 1 of 5 labels: deposit, withdrawal, account_access, bonus, other. Filling category is optional, not scored.
-- Have at least 3 automated tests covering 2 kinds of personal data, multilingual P2 requests and instructions inside tickets. Commit out/test_output.txt: test command and full output.
-- Add "Deploy in our stack" to your README.md (max 8 lines). Include where it runs (Lark bot, n8n or Apps Script), where API keys are kept, what happens if the LLM fails, the human-queue owner and how you detect overdue P2 cases.
+1. Run on data/tickets.csv with one offline command and no API key.
+2. Keep a record of every input row, identify duplicates, and convert timestamps to UTC.
+3. Hide customer personal data before creating any LLM payload. Keep money amounts and transaction references readable. Demonstrate redaction on at least two eligible tickets.
+4. Mark P2 and other human-only tickets with a reason. Never include them in LLM payloads. Explain your human-routing choices.
+5. Treat ticket text as untrusted input, including instructions inside it. No model output may send replies, change accounts or approve money.
+6. Produce out/triage.csv and out/llm_payloads.jsonl using the [exact formats](SUBMISSION_GUIDE.md#task-2-output-formats).
+7. Include at least three automated tests covering two kinds of personal data, multilingual P2 requests and instructions inside tickets. Save the command and full output in out/test_output.txt.
+
+The payload prompt must ask for one label: deposit, withdrawal, account_access, bonus or other. Include the category column in triage.csv; its values may be blank and are not scored. No model call is required.
+
+In your README.md, add **Deploy in our stack** (max eight lines): where it would run (Lark bot, n8n or Apps Script), where keys would be stored, the LLM failure fallback, the human-queue owner and how overdue P2 cases would be detected. This is a written proposal; implementation is not required.
 
 ### Task 3. Company AI plan (40 min)
 
@@ -106,14 +127,11 @@ Top of MEMO.md, above the appendices: a memo of max 250 words to your manager an
 - Top 2 risks, 1 action each.
 - 2 things you need from others, each with owner and date.
 
-Every number must match FINDINGS.md, PLAN.md and the appendices.
+Use consistent definitions and numbers across FINDINGS.md, PLAN.md and the appendices. Clearly label different scopes, such as triage savings versus total portfolio savings.
 
 ### Task 6. README and AI usage (10 min)
 
-Deliver your own README.md (it replaces this file) and AI_USAGE.md:
-
-- README.md: run and test commands, tools used (1 line), what is real or mocked, what you left out, real minutes per task.
-- AI_USAGE.md: fill in AI_USAGE_TEMPLATE.md.
+Deliver your own README.md using the submission checklist, and complete AI_USAGE_TEMPLATE.md as AI_USAGE.md.
 
 ## Rules
 
@@ -135,16 +153,14 @@ Deliver your own README.md (it replaces this file) and AI_USAGE.md:
 
 ## Submission
 
-Create your own repository and send its link to your recruiter. Prefer a private repository with read access for the GitHub user they name; a public repository is accepted. Do not open a pull request with your solution in this test repository. If you cannot use GitHub, email them a git bundle.
+Follow [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for the repository structure, document limits and final checklist. Write your own README.md in place of this brief; keep a separate copy of the instructions for reference.
 
-Your repo must have: README.md, FINDINGS.md, PLAN.md, MEMO.md, AI_USAGE.md, src/, tests/, out/ (committed), analysis/ and data/ (our 4 files, unchanged).
+Send your own repository link to the recruiter using the access instructions in the submission guide.
 
 ## Live follow-up
 
-Interview: 60 minutes on video. Present PLAN.md as if to all staff (10 minutes), explain your repo, and make 1 small code change.
+The 60-minute interview includes a ten-minute staff presentation, a repo explanation and one small code change. See the submission guide for details.
 
-## FAQ
+## Questions and assumptions
 
-**I do not read Thai, Vietnamese or Chinese.** Use any free translation tool.
-
-**Something is unclear.** Write your assumption in your README.md and continue. Reasoned alternatives are accepted.
+Free translation tools are allowed. If something is unclear, state your assumption and continue. Reasoned alternatives are accepted.
