@@ -1,0 +1,9 @@
+req_id,team,title,description,volume_per_week,minutes_per_item,claimed_hours_per_week,build_hours_est,money_movement,customer_facing
+AR-01,CS,AI ticket triage,"AI reads every new ticket, sets the category and sends it to the right queue. Agents stop sorting tickets by hand.",720,3.75,45,60,N,N
+AR-02,Ops Analysts,AI daily KPI post,"Every morning an AI agent reads yesterday's KPIs (key business numbers) from BigQuery, writes a short summary with the numbers and posts it to the management Lark group.",7,30,3.5,24,N,N
+AR-03,Payments & Risk,AI approves flagged withdrawals,"An LLM reviews withdrawals flagged by our risk rules. If the amount is under USD 500 and the LLM says low risk, the withdrawal is approved automatically.",300,6,30,80,Y,Y
+AR-04,CS,Auto-handle account limit requests,"When a customer asks to limit, pause or close their account, the system sends a standard reply and applies the change. No agent needed.",38,9,12,40,N,Y
+AR-05,Marketing,AI promo drafts in 4 languages,"AI drafts the weekly promo messages in English, Thai, Vietnamese and Chinese. Marketing edits and sends them.",12,45,9,40,N,Y
+AR-06,Payments & Risk,AI deposit matching,"Each day AI reads the payment provider's deposit file and our wallet deposit records, decides which records match and lists the ones that do not.",7,45,12,60,N,N
+AR-07,Ops Analysts,Remove access for staff who leave,"When HR marks that a staff member has left, remove their access to Lark, Google, WorkAI and admin tools within 24 hours and log it.",1,40,0.7,16,N,N
+AR-08,VIP,AI weekly VIP summary,"Each week AI writes a 1-page summary per VIP customer (deposits, tickets, host notes) for their VIP host.",30,12,6,80,N,N
