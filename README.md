@@ -1,6 +1,6 @@
 # AI & Innovation Manager: Your First 90 Days
 
-We want a leader who identifies opportunities and helps the whole company use AI productively. Recommend a direction, explain its value and show how you would deliver it.
+Show how you would find valuable opportunities, lead useful AI adoption across teams and turn your recommendations into a 90-day plan.
 
 All company information and data in this exercise are fictional.
 
@@ -16,7 +16,7 @@ Read the scenario and policies, then review the four supplied files using [DATA_
 
 **Estimated effort is 3 to 4 hours**, including about 20 minutes for reading and setup. Submit within **five calendar days** of receiving the assignment.
 
-Use free or local tools and mock external systems. The run command must work offline. You may use documentation, AI and translation tools during preparation. AI use is optional. A small local script is sufficient.
+Use free or local tools. You may use documentation and translation tools while preparing your work. AI assistance is optional.
 
 File formats and the final checklist are in [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md).
 
@@ -26,14 +26,14 @@ It is Monday 2026-10-12, your first week. Use that date for your plans. You repo
 
 The company runs a real-money wallet app. Its five teams are Customer Support (CS, operating 24/7), Ops Analysts, Payments & Risk, VIP and Marketing.
 
-You receive these messages:
+These are the requests and claims on your desk.
 
 - The CS lead wants AI to help sort incoming support tickets this month and claims it will save 45 hours each week.
 - The CEO wants to sign with TriageGenie: 94% accuracy and delivery in two weeks.
 - Teams have submitted eight automation requests. You have 160 build hours for the next 90 days, ending 2027-01-10.
 - Last month's report says 78% of staff use AI. The CEO wants all five teams using AI safely and usefully every week within 90 days.
 
-Propose what else deserves attention. Evidence is incomplete: distinguish facts, assumptions and unanswered questions.
+Decide what deserves attention. Distinguish facts, assumptions and questions you would verify.
 
 ## 3. Policies and operating facts
 
@@ -47,12 +47,16 @@ Propose what else deserves attention. Evidence is incomplete: distinguish facts,
 - Tickets: 720 per week in English, Thai, Vietnamese and Chinese.
 - Ticket queue: 8 agents, USD 7.50 per hour each, 52 weeks a year.
 - Your team: four people, USD 25 per hour each. You allocate their work.
-- Approved AI tool: WorkAI Team, USD 30 per seat per month, one seat per staff member. It is external cloud software, so P1 applies. It does not train on company data.
 - If your own build uses an LLM (an AI text model), assume USD 20 a month.
 - app_chat timestamps are UTC. web_form timestamps use GMT+7, dd/mm/yyyy HH:MM.
 - Transaction references are TX followed by ten digits.
 
-The data/ folder contains tickets.csv, ai_seats.csv, requests.csv and vendor_quote.md. Keep all four files unchanged and document any cleaning in your analysis.
+### Tools in this scenario
+
+- WorkAI Team is the approved AI tool. It costs USD 30 per seat per month, with one seat per staff member. The service runs outside company systems, so P1 applies. It does not train on company data.
+- Ops uses BigQuery for reporting and Lark for team communications. IT supports staff access to Google, Lark, WorkAI and internal admin tools.
+
+Use this context when proposing integrations or changes to staff workflows. State any assumptions about access or capabilities. Build locally in a language of your choice and mock external systems. Keep the four supplied data files unchanged.
 
 ## 4. The three modules
 
@@ -62,7 +66,7 @@ The data/ folder contains tickets.csv, ai_seats.csv, requests.csv and vendor_quo
 
 Write FINDINGS.md (max 350 words) and put a reproducible script or SQL in analysis/.
 
-Assess the management claims with calculations and record IDs/counts. Explain the most urgent issue, its significance and your first business question. Define current AI adoption and the measure's limitations.
+Check the triage savings and AI usage claims. Show your calculations and cite supporting record IDs or counts. Explain how you measured adoption and what the data can tell you. Name the most urgent issue and one question whose answer would change your decision.
 
 #### Company AI plan (40 points)
 
@@ -72,19 +76,19 @@ Write PLAN.md (max 800 words, including tables) with the four sections below. Ch
 
 Propose two opportunities beyond the eight supplied requests. Each should address a different problem or introduce a materially different way of working. At least one should help more than one team or improve a shared company capability. For each, state the problem and intended users, supporting evidence or assumption, expected value, main risk and the smallest experiment that would test it. Explain how you would discover and validate further needs with staff.
 
-Choose what to start first across your ideas and the existing requests. Explain what you would defer. Submit your ideas as proposals in PLAN.md and Appendix B.
+Compare your ideas with the existing requests. Recommend what to start first and explain what you would defer.
 
 **2. Adoption and useful work**
 
-Explain how you would help all five teams adopt useful, safe AI workflows, earn participation and respond if use declined. You may propose a different pace or target for the CEO's weekly-use ambition. Explain the evidence and how you would measure success. Ground your starting point in the data. Define success beyond activity counts. Your two opportunities may also support this part of the plan.
+Use the data to describe where the five teams are starting. Explain how you would earn participation, help teams use AI in their daily work and respond if use fell. Assess whether the CEO's target makes sense and justify any change to the pace or target.
 
 **3. Execution and leadership**
 
-Set out your plan for weeks 1 to 2, 3 to 6 and 7 to 12. Include owners, dependencies on Data, Product and Security, your four-person team's responsibilities and one development or coaching action. Define what evidence would lead you to continue, change or stop your first initiative. Show how you protect ongoing IT support while delivering the plan.
+Set out your plan for weeks 1 to 2, 3 to 6 and 7 to 12. Assign responsibilities across your four-person team, identify what you need from Data, Product and Security, and include one coaching or development action. Explain who will own the work after launch, how you will cover IT support and what evidence would make you continue, change or stop the first initiative.
 
 **4. Measures and safeguards**
 
-Set measurable week-2, week-6 and week-12 targets, define how you will measure them, and address your top two risks. State the data boundaries and human review your plan requires.
+Set measurable targets for weeks 2, 6 and 12. Show how you would measure usage, usefulness and quality. Address your two biggest risks and explain what data teams can use and when a person needs to review AI output.
 
 ### Module B. Make the investment decisions
 
@@ -94,9 +98,9 @@ At the top of MEMO.md, write a memo of max 250 words to your manager and the CEO
 
 #### Vendor and portfolio decisions (15 points)
 
-**Appendix A: Vendor decision** (max 150 words plus one table). Recommend buy, pilot or do not buy, with the evidence and conditions that would change your mind. Use a three-row, 12-month cost table: vendor, own triage build and value of triage time saved. Show formulas and assumptions, including support and human review. Separate released capacity from cash savings. If proposing a pilot, state its duration and numerical safety and quality pass criteria.
+**Appendix A. Vendor decision** (max 150 words plus one table). Recommend whether to buy, run a pilot or decline. Explain what evidence supports your choice and what could change it. Show three figures over 12 months in one table: vendor cost, in-house triage cost and value of the staff time saved. State your formulas and assumptions, including support and human review. Explain how much time the team would free up and whether spending would fall. For a pilot, give a duration and measurable safety and quality criteria.
 
-**Appendix B: Portfolio** (one compact table). For each of the eight requests and your two new ideas, show decision (90 days, later or no), AI role (none, assists or decides), estimated weekly benefit, build hours, owner and reason. Unknown benefits may be stated as unknown with a validation method.
+**Appendix B. Portfolio** (one compact table). For each of the eight requests and your two new ideas, show decision (90 days, later or no), AI role (none, assists or decides), estimated weekly benefit, build hours, owner and reason. Unknown benefits may be stated as unknown with a validation method.
 
 In Appendix B, total the build hours for selected work, including experiments, testing, integration and builds proposed in PLAN.md. Stay within 160 hours. Explain revised scope or estimates, list training and support effort separately, and count each benefit once.
 
@@ -106,19 +110,18 @@ In Appendix B, total the build hours for selected work, including experiments, t
 
 Build a small, safe triage step using data/tickets.csv. Everyone works from the same technical brief. You decide whether triage belongs in your 90-day plan.
 
-Your solution must:
+The sample needs to meet these requirements.
 
-- run with one offline command and no API key;
-- account for every input row, identify duplicates and convert timestamps to UTC;
-- redact personal data before forming any LLM payload, preserving money amounts and transaction references;
-- identify human-only cases under P2 or your own justified safety rules and exclude them from payloads;
-- treat instructions inside customer messages as untrusted input; model output must not send replies, change accounts or approve money;
-- demonstrate redaction on at least two eligible tickets; and
-- include at least three automated tests covering two kinds of personal data, multilingual P2 requests and instructions inside tickets.
+- Run with one offline command and no API key.
+- Account for every input row, identify duplicates and convert timestamps to UTC.
+- Redact personal data before forming any LLM payload. Preserve money amounts and transaction references. Demonstrate redaction on at least two eligible tickets.
+- Flag P2 cases and any other cases that need human review. Record the reason and exclude them from model payloads.
+- Treat customer instructions as untrusted input. Keep replies, account changes and money approvals under human control.
+- Include at least three automated tests. Cover two kinds of personal data, P2 requests in multiple languages and instructions inside tickets.
 
 Commit out/triage.csv, out/llm_payloads.jsonl and out/test_output.txt using the [output formats](SUBMISSION_GUIDE.md#module-c-output-formats). Generate proposed payloads even without a model call. The prompt must request one label: deposit, withdrawal, account_access, bonus or other. Include the category column, but its values may be blank and are not scored.
 
-In your README.md, propose where this would run, how you would store any keys, what happens on failure, who owns the human queue and how they would detect overdue P2 cases. Explain one important limitation.
+In your README.md, include a short [production handoff](SUBMISSION_GUIDE.md#production-handoff) explaining how your prototype could be operated.
 
 #### Reproducibility and AI disclosure (5 points)
 
@@ -126,14 +129,12 @@ Write your own README.md using the submission guide, and complete AI_USAGE_TEMPL
 
 ## 5. How we evaluate
 
-The assessment totals 100 points. PLAN.md's 40 points cover independent opportunity discovery and experiments (15), useful adoption across teams (10), people leadership (5), execution (5), and safeguards (5).
+We look for original opportunities tied to real work, a plan to sustain useful adoption, sound investment decisions and a small, reproducible prototype. Explain your assumptions, tradeoffs and safeguards so reviewers can follow your reasoning.
 
-To progress, candidates need at least 65/100 overall, 24/40 on the company plan, 8/15 on independent opportunity discovery and 6/10 on adoption, with no serious safety breach. Advancing also requires at least one qualifying new opportunity. We assess the reasoning behind your choices. We use the interview to verify ownership and explore uncertainty.
-
-Unsafe disclosure, P2 automation, unreviewed model actions or committed secrets can disqualify a submission. Extra features, paid tools, slides and polished UI earn no extra credit. Honest limits are preferable to unsupported claims.
+Use synthetic data and placeholders for any credentials. Reviewers will check compliance with P1 and P2 and look for human control of consequential actions.
 
 ## 6. Submit and discuss
 
 Follow [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for repository access and the final checklist. Send your own repository link to the recruiter. Do not submit a solution as a pull request to this test repository.
 
-The 60-minute follow-up includes a short staff presentation, questions about your decisions and code, one small code change and a discussion of how you would adapt when circumstances change. Normal development tools, including AI, may be used. No slide deck or recording is required.
+If invited to a 60-minute interview, use your submission to brief staff, explain your decisions, make a small code change and adapt your plan to new information. You may use your usual development tools, including AI.

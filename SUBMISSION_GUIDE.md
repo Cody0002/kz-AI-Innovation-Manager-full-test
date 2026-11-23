@@ -74,11 +74,11 @@ Save the exact test command and its full output. At least three automated tests 
 
 ## Portfolio and experiment scope
 
-Use the existing PLAN.md and Appendix B for your two proposed opportunities. No additional prototype or external research is required. You may add clearly labeled synthetic test fixtures; keep the four supplied source files unchanged. For an unvalidated opportunity, estimate the effort of its first experiment and explain uncertainty. Include selected experiment/build hours in the 160-hour portfolio total. The 160 hours represent the fictional team's build budget for the first 90 days.
+Describe your two proposed opportunities in PLAN.md and list them in Appendix B. Estimate the work needed for each first experiment and explain what is uncertain. Include selected experiment and build hours in the 160-hour team budget. You may add labeled synthetic test fixtures alongside the supplied files.
 
 ## Production handoff
 
-In your README.md, briefly explain where the sample would run, key storage if applicable, failure behavior, human-queue ownership and overdue P2 detection. State one important limitation. You choose the runtime; explain its fit with the scenario. Implementation of live integrations is not required.
+In your README.md, explain where the sample would run, how you would store any keys, what happens on failure, who owns the human queue and how they would detect overdue P2 cases. State one important limitation. Use the scenario tools where relevant and document integration assumptions. Describe the production setup in writing and run the prototype locally.
 
 ## Repository access
 
@@ -97,4 +97,4 @@ Create your own repository and send its link to your recruiter. Prefer a private
 
 ## Live follow-up
 
-The interview lasts 60 minutes: a ten-minute staff presentation, discussion of your evidence and original ideas, one small code/test change, a changed-business-condition exercise, leadership questions and your questions. Normal development tools, including AI, may be used. We assess understanding and adaptation; no separate slide deck or recorded video is required.
+If invited, plan for a 60-minute interview. Use your submission to give a ten-minute briefing as if speaking to staff. We will discuss your evidence and ideas, ask you to make a small code or test change, and give you new information to respond to. We also cover leadership experience and leave time for your questions. You may use normal development tools, including AI.
