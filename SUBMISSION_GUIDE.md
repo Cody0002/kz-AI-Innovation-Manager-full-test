@@ -1,6 +1,6 @@
 # Submission Guide
 
-Complete all six tasks in the challenge README. Submit the smallest solution that demonstrates the required behavior. A UI, cloud deployment and live integrations are not required.
+Complete all three modules in the challenge README. Submit a small solution that demonstrates the required behavior.
 
 ## What to submit
 
@@ -23,17 +23,17 @@ your-submission/
 
 You may retain the supplied guides and AI usage template. Additional files earn no extra credit.
 
-| Document | Required content | Limit |
-|---|---|---|
-| README.md | Setup, run and test commands; tools used; real/mocked behavior; assumptions; unfinished work; actual time; production handoff | Keep concise |
-| FINDINGS.md | Evidence, corrected claims, adoption baseline, urgent issue and business question from Task 1 | 350 words |
-| PLAN.md | Task 3's four sections: opportunities/choices, adoption/useful work, execution/leadership, measures/safeguards | 800 words, including tables |
-| MEMO.md: opening | Task 5's memo to management, before the appendices | 250 words |
-| MEMO.md: Appendix A | Vendor decision, cost table, conditions and any pilot targets | 150 words, excluding its one cost table |
-| MEMO.md: Appendix B | One row per supplied request and proposed idea (ten rows total), estimates and capacity total | No word limit; keep concise |
-| AI_USAGE.md | Completed AI_USAGE_TEMPLATE.md; an honest no-AI submission is accepted | No word limit; short answers are enough |
+| Module | Document | Required content | Limit |
+|---|---|---|---|
+| A | FINDINGS.md | Evidence, corrected claims, adoption baseline, urgent issue and business question | 350 words |
+| A | PLAN.md | Opportunities and choices, adoption and useful work, execution and leadership, measures and safeguards | 800 words, including tables |
+| B | MEMO.md (opening) | Memo to management before the appendices | 250 words |
+| B | MEMO.md (Appendix A) | Vendor decision, cost table, conditions and any pilot targets | 150 words, excluding the cost table |
+| B | MEMO.md (Appendix B) | One row per supplied request and proposed idea (ten rows total), estimates and capacity total | Keep concise |
+| C | README.md | Setup, run and test commands, tools, real and mocked behavior, assumptions, limitations and proposed production handoff | Keep concise |
+| C | AI_USAGE.md | Completed AI_USAGE_TEMPLATE.md, including how you verified your work | Short answers are enough |
 
-## Task 2 output formats
+## Module C output formats
 
 ### out/triage.csv
 
@@ -74,7 +74,7 @@ Save the exact test command and its full output. At least three automated tests 
 
 ## Portfolio and experiment scope
 
-Use the existing PLAN.md and Appendix B for your two proposed opportunities. No additional prototype or external research is required. You may add clearly labeled synthetic test fixtures; keep the four supplied source files unchanged. For an unvalidated opportunity, estimate the effort of its first experiment and explain uncertainty. Include selected experiment/build hours in the 160-hour portfolio total. The take-home timebox and this fictional team build budget are different constraints.
+Use the existing PLAN.md and Appendix B for your two proposed opportunities. No additional prototype or external research is required. You may add clearly labeled synthetic test fixtures; keep the four supplied source files unchanged. For an unvalidated opportunity, estimate the effort of its first experiment and explain uncertainty. Include selected experiment/build hours in the 160-hour portfolio total. The 160 hours represent the fictional team's build budget for the first 90 days.
 
 ## Production handoff
 
@@ -91,7 +91,7 @@ Create your own repository and send its link to your recruiter. Prefer a private
 - [ ] README.md gives setup instructions and one offline run command that needs no API key.
 - [ ] The documented test command reproduces the recorded test results.
 - [ ] Document limits are met and shared numbers use consistent definitions.
-- [ ] Assumptions, unfinished work and actual time spent are disclosed.
+- [ ] Assumptions and known limitations are documented.
 - [ ] No real customer data, credentials or secrets are included.
 - [ ] The recruiter can access your repository.
 
