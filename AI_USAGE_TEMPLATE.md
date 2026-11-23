@@ -1,6 +1,6 @@
 # AI Usage
 
-Copy this file to AI_USAGE.md and fill in every section. Short answers are fine.
+Copy this file to AI_USAGE.md and fill in every section. Short answers are fine. AI use is optional. If you used no AI, say so in sections 1-3 and complete the remaining sections. Do not invent prompts, errors or rejected suggestions.
 
 ## 1. Tools used
 
@@ -12,7 +12,7 @@ What you asked the AI (1 to 2 lines), what the AI gave you, and what you kept or
 
 ## 3. One AI suggestion you did not use
 
-Give the exact file, row or number it was about. Say why you did not use it and what you did instead.
+Give the exact file, row or number it was about. Say why you did not use it and what you did instead. If you rejected none, say so and describe one suggestion you independently checked, with the evidence.
 
 ## 4. How you checked your work
 
