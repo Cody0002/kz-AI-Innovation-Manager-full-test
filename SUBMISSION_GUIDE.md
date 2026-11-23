@@ -70,7 +70,7 @@ This example shows the format only. Design your own prompt and safety controls.
 
 ### out/test_output.txt
 
-Save the exact test command and its full output. At least three automated tests must cover two kinds of personal data, multilingual P2 requests and instructions inside tickets. One test may cover several cases. Report failures honestly.
+Save the exact test command and its full output. Across at least three automated tests, demonstrate redaction of two kinds of personal data, detection of P2 requests in multiple languages and safe handling of a ticket that tries to override the triage instructions. One test may cover several cases. Report failures honestly.
 
 ## Portfolio and experiment scope
 

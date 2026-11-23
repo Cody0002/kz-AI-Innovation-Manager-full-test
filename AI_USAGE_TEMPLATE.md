@@ -1,30 +1,17 @@
-# AI Usage
+# AI usage
 
-Copy this file to AI_USAGE.md and fill in every section. Short answers are fine. AI use is optional. If you used no AI, say so in sections 1-3 and complete the remaining sections. Do not invent prompts, errors or rejected suggestions.
+Save a copy as AI_USAGE.md. A few sentences per section are enough.
 
-## 1. Tools used
+## 1. How you worked
 
-List each tool, its price plan (free, local = runs on your computer, or other) and what you used it for.
+If you used AI, name the tools and describe one suggestion you checked. Point to the file, row or calculation it affected. Explain what you kept, changed or rejected and why.
 
-## 2. One example of using AI
+If you worked without AI, write "I completed this exercise without AI assistance" and continue to section 2.
 
-What you asked the AI (1 to 2 lines), what the AI gave you, and what you kept or changed.
+## 2. How you verified your work
 
-## 3. One AI suggestion you did not use
+Give a command, manual check or comparison you used to verify a result. State what you observed so a reviewer can repeat the check.
 
-Give the exact file, row or number it was about. Say why you did not use it and what you did instead. If you rejected none, say so and describe one suggestion you independently checked, with the evidence.
+## 3. Data handling
 
-## 4. How you checked your work
-
-How you checked the numbers, the code and the output files. Give the command or the check you used.
-
-## 5. Data safety
-
-What data you did not give to AI tools. Also, what data you would not give if it were real.
-
-## 6. Responsibility statement
-
-I have read and understood all code and text in this repo. I can explain and change any part of it in the interview.
-
-Name:
-Date:
+If you used an external AI tool, describe what you shared from the synthetic case. Explain what you would protect when doing the same work with real company or customer data.

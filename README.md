@@ -94,7 +94,7 @@ Set out your plan for weeks 1 to 2, 3 to 6 and 7 to 12. Assign responsibilities 
 
 **4. Measures and safeguards**
 
-Set measurable targets for weeks 2, 6 and 12. Show how you would measure usage, usefulness and quality. Address your two biggest risks and explain what data teams can use and when a person needs to review AI output.
+Set measurable targets for weeks 2, 6 and 12. Use week 12 as the final reporting checkpoint for your 90-day plan. Show how you would measure usage, usefulness and quality. Address your two biggest risks and explain what data teams can use and when a person needs to review AI output.
 
 ### Module B. Make the investment decisions
 
@@ -104,7 +104,7 @@ At the top of MEMO.md, write a memo of max 250 words to your manager and the CEO
 
 #### Vendor and portfolio decisions (15 points)
 
-**Appendix A. Vendor decision** (max 150 words plus one table). Recommend whether to buy, run a pilot or decline. Explain what evidence supports your choice and what could change it. Show three figures over 12 months in one table: vendor cost, in-house triage cost and value of the staff time saved. State your formulas and assumptions, including support and human review. Explain how much time the team would free up and whether spending would fall. For a pilot, give a duration and measurable safety and quality criteria.
+**Appendix A. Vendor decision** (max 150 words plus one table). Recommend whether to buy, run a pilot or decline. Explain what evidence supports your choice and what could change it. Use one table to compare 12-month vendor and in-house costs with the value of staff time each option could save. One savings estimate is enough if it applies to both options. Show your formulas and assumptions, including support and human review. Explain whether spending would fall. For a pilot, give a duration and measurable safety and quality criteria.
 
 **Appendix B. Portfolio** (one compact table). For each of the eight requests and your two new ideas, show decision (90 days, later or no), AI role (none, assists or decides), estimated weekly benefit, build hours, owner and reason. Unknown benefits may be stated as unknown with a validation method.
 
@@ -123,7 +123,7 @@ The sample needs to meet these requirements.
 - Redact personal data before forming any LLM payload. Preserve money amounts and transaction references. Demonstrate redaction on at least two eligible tickets.
 - Flag P2 cases and any other cases that need human review. Record the reason and exclude them from model payloads.
 - Treat customer instructions as untrusted input. Keep replies, account changes and money approvals under human control.
-- Include at least three automated tests. Cover two kinds of personal data, P2 requests in multiple languages and instructions inside tickets.
+- Include at least three automated tests. Cover two kinds of personal data, P2 requests in multiple languages and a ticket that tries to override the triage instructions.
 
 Commit out/triage.csv, out/llm_payloads.jsonl and out/test_output.txt using the [output formats](SUBMISSION_GUIDE.md#module-c-output-formats). Generate proposed payloads even without a model call. The prompt must request one label: deposit, withdrawal, account_access, bonus or other. Include the category column, but its values may be blank and are not scored.
 
