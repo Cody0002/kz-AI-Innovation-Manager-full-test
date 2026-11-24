@@ -10,9 +10,9 @@ Read the scenario and policies, then review the four supplied files using [DATA_
 
 | Module | Submit | Points |
 |---|---|---:|
-| A. Diagnose and propose a 90-day plan | FINDINGS.md, analysis/, PLAN.md | 50 |
-| B. Make the investment decisions | MEMO.md, including both appendices | 25 |
-| C. Demonstrate hands-on judgment | src/, tests/, out/, README.md, AI_USAGE.md | 25 |
+| A. [Diagnose and propose a 90-day plan](#module-a-diagnose-and-propose-a-90-day-plan) | FINDINGS.md, analysis/, PLAN.md | 50 |
+| B. [Make the investment decisions](#module-b-make-the-investment-decisions) | MEMO.md, including both appendices | 25 |
+| C. [Demonstrate hands-on judgment](#module-c-demonstrate-hands-on-judgment) | src/, tests/, out/, README.md, AI_USAGE.md | 25 |
 
 **Estimated effort is 3 to 4 hours**, including about 20 minutes for reading and setup. Submit within **five calendar days** of receiving the assignment.
 
@@ -22,9 +22,9 @@ File formats and the final checklist are in [SUBMISSION_GUIDE.md](SUBMISSION_GUI
 
 ## 2. Your situation
 
-It is Monday 2026-10-12, your first week. Use that date for your plans. You lead a four-person team and report to management.
+You lead a four-person team and report to management. Your first week starts on Monday, 12 October 2026. Use that date as the starting point for your plan.
 
-The company runs a real-money wallet app. Its five teams are Customer Support (CS, operating 24/7), Ops Analysts, Payments & Risk, VIP and Marketing.
+The company runs a real-money wallet app. Your adoption plan covers Customer Support (CS, operating 24/7), Ops Analysts, Payments & Risk, VIP and Marketing.
 
 These are the requests and claims on your desk.
 
@@ -100,7 +100,7 @@ Set measurable targets for weeks 2, 6 and 12. Use week 12 as the final reporting
 
 #### Management memo (10 points)
 
-At the top of MEMO.md, write a memo of max 250 words to management. Lead with your recommendation and first delivery. Summarize the expected impact and its uncertainty, adoption baseline and week-12 goal, vendor decision, top risks and two requests for support with owners and dates. Keep definitions and numbers consistent with the supporting work.
+Open MEMO.md with your recommendation to management and what you would deliver first. Keep the opening memo within 250 words. Summarize the expected impact and its uncertainty, adoption baseline and week-12 goal, vendor decision, top risks and two requests for support with owners and dates. Keep definitions and numbers consistent with the supporting work.
 
 #### Vendor and portfolio decisions (15 points)
 
