@@ -11,7 +11,7 @@ your-submission/
   PLAN.md
   MEMO.md
   AI_USAGE.md
-  analysis/                 # Your data-checking script or SQL
+  analysis/                 # Spreadsheet with formulas, script or SQL
   src/                      # Your common triage skills sample
   tests/                    # Your automated tests
   out/
@@ -26,8 +26,8 @@ You may retain the supplied guides and AI usage template. Additional files earn 
 | Module | Document | Required content | Limit |
 |---|---|---|---|
 | A | FINDINGS.md | Evidence, corrected claims, adoption baseline, urgent issue and business question | 350 words |
-| A | PLAN.md | Opportunities and choices, adoption and useful work, execution and leadership, measures and safeguards | 800 words, including tables |
-| B | MEMO.md (opening) | Memo to management before the appendices | 250 words |
+| A | PLAN.md | Two original ideas, adoption plan, three-row milestone table, response to a delay, team responsibilities and safeguards | 800 words, including tables |
+| B | MEMO.md (opening) | Week-2 commitment to management, stakeholder tradeoff and two decisions or actions you need | 250 words |
 | B | MEMO.md (Appendix A) | Vendor decision, cost table, conditions and any pilot targets | 150 words, excluding the cost table |
 | B | MEMO.md (Appendix B) | One row per supplied request and proposed idea (ten rows total), estimates and capacity total | Keep concise |
 | C | README.md | Setup, run and test commands, tools, real and mocked behavior, assumptions, limitations and proposed production handoff | Keep concise |
@@ -97,4 +97,4 @@ Create your own repository and send its link to your recruiter. Prefer a private
 
 ## Live follow-up
 
-If invited, plan for a 60-minute interview. Use your submission to give a ten-minute briefing as if speaking to staff. We will discuss your evidence and ideas, ask you to make a small code or test change, and give you new information to respond to. We also cover leadership experience and leave time for your questions. You may use normal development tools, including AI.
+If invited, plan for a 60-minute interview. Use your submission to give a ten-minute staff briefing in English. We will discuss one of your ideas, ask you to make a small code or test change and role-play a stakeholder conversation about a project that has gone off track. We will also discuss your leadership experience and leave time for your questions. You may use your usual development tools, including AI. Slides are optional.

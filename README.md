@@ -1,12 +1,12 @@
 # AI & Innovation Manager: Your First 90 Days
 
-Show how you would find valuable opportunities, lead useful AI adoption across teams and turn your recommendations into a 90-day plan.
+What should the company do with AI in the next 90 days? Make a recommendation to management, show how your team would deliver it and demonstrate one safety decision in a small working prototype.
 
-The business scenario and data are fictional. The company tools listed below reflect our working environment.
+The scenario and data are fictional. Treat the records as customer data when applying the case policies.
 
 ## 1. Start here
 
-Read the scenario and policies, then review the four supplied files using [DATA_GUIDE.md](DATA_GUIDE.md). Complete all three modules for the same case. You choose which opportunities to pursue and how to deliver them.
+Complete all three modules for one case. Use the [data guide](DATA_GUIDE.md) for the four source files and the [submission guide](SUBMISSION_GUIDE.md) for file formats and access.
 
 | Module | Submit | Points |
 |---|---|---:|
@@ -16,9 +16,7 @@ Read the scenario and policies, then review the four supplied files using [DATA_
 
 **Estimated effort is 3 to 4 hours**, including about 20 minutes for reading and setup. Submit within **five calendar days** of receiving the assignment.
 
-Use free or local tools. You may use documentation and translation tools while preparing your work. AI assistance is optional.
-
-File formats and the final checklist are in [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md).
+Use free or local tools. Documentation, translation tools and AI assistance are welcome.
 
 ## 2. Your situation
 
@@ -26,10 +24,8 @@ You lead a four-person team and report to management. Your first week starts on 
 
 The company runs a real-money wallet app. Your adoption plan covers Customer Support (CS, operating 24/7), Ops Analysts, Payments & Risk, VIP and Marketing.
 
-These are the requests and claims on your desk.
-
 - The CS lead wants AI to help sort incoming support tickets this month and claims it will save 45 hours each week.
-- The CEO wants to sign with TriageGenie: 94% accuracy and delivery in two weeks.
+- The CEO wants TriageGenie live in two weeks, citing its claim of 94% accuracy. The CS lead can spare one agent for a pilot. Security can review the proposed use of customer tickets in week 3. Until then, external testing is limited to synthetic tickets.
 - Teams have submitted eight automation requests. You have 160 build hours for the next 90 days, ending 2027-01-10.
 - Last month's report says 78% of staff use AI. The CEO wants all five teams using AI safely and usefully every week within 90 days.
 
@@ -49,8 +45,6 @@ Decide what deserves attention. Distinguish facts, assumptions and questions you
 - Your team: four people, USD 25 per hour each. You allocate their work.
 - WorkAI Team is the fictional approved AI tool used in the case and seat data. Assume USD 30 per seat per month and one seat per staff member. It runs outside company systems, so P1 applies. It does not train on company data.
 - If your proposed solution uses an LLM (an AI text model), assume USD 20 a month for the case.
-- app_chat timestamps are UTC. web_form timestamps use GMT+7, dd/mm/yyyy HH:MM.
-- Transaction references are TX followed by ten digits.
 
 ### Company tools
 
@@ -62,7 +56,7 @@ Decide what deserves attention. Distinguish facts, assumptions and questions you
 | Team workflows | Lark for communication and alerts, monday.com for tracking tasks |
 | Hosting | AWS EC2, Ubuntu/Linux and Docker |
 
-Use this list as context for your plan. Explain any assumptions about access or integrations. Run the prototype offline in a language of your choice and mock external systems. Keep the four supplied data files unchanged.
+Use these tools as context for your plan. State integration assumptions. For the offline prototype, choose your language and mock external systems. Keep the supplied data unchanged.
 
 ## 4. The three modules
 
@@ -70,17 +64,17 @@ Use this list as context for your plan. Explain any assumptions about access or 
 
 #### Findings (10 points)
 
-Write FINDINGS.md (max 350 words) and put a reproducible script or SQL in analysis/.
+Write FINDINGS.md (max 350 words). Put your calculations in analysis/ as a spreadsheet with formulas, a script or SQL so someone else can check them.
 
 Check the triage savings and AI usage claims. Show your calculations and cite supporting record IDs or counts. Explain how you measured adoption and what the data can tell you. Name the most urgent issue and one question whose answer would change your decision.
 
 #### Company AI plan (40 points)
 
-Write PLAN.md (max 800 words, including tables) with the four sections below. Choose an adoption approach that fits your findings.
+Write PLAN.md in four sections (max 800 words, including tables).
 
 **1. Opportunities and choices**
 
-Propose two opportunities beyond the eight supplied requests. Each should address a different problem or introduce a materially different way of working. At least one should help more than one team or improve a shared company capability. For each, state the problem and intended users, supporting evidence or assumption, expected value, main risk and the smallest experiment that would test it. Explain how you would discover and validate further needs with staff.
+Propose two distinct opportunities beyond the eight requests. At least one should help multiple teams. For each, give the problem, users, evidence or assumption, expected value, main risk and smallest useful experiment. Explain how you would discover and validate further needs with staff.
 
 Compare your ideas with the existing requests. Recommend what to start first and explain what you would defer.
 
@@ -90,17 +84,19 @@ Use the data to describe where the five teams are starting. Explain how you woul
 
 **3. Execution and leadership**
 
-Set out your plan for weeks 1 to 2, 3 to 6 and 7 to 12. Assign responsibilities across your four-person team, identify what you need from Data, Product and Security, and include one coaching or development action. Explain who will own the work after launch, how you will cover IT support and what evidence would make you continue, change or stop the first initiative.
+Use a three-row table for weeks 1 to 2, 3 to 6 and 7 to 12. For each phase, give a milestone, an accountable owner and the evidence you would check with them. For your first initiative, identify one dependency that could delay it, the first sign of a slip and the decision you would make if it slipped.
+
+Show how your four-person team shares delivery and ongoing IT support, who owns the work after launch and one skill you would coach. Name the decisions you need from Data, Product or Security where relevant.
 
 **4. Measures and safeguards**
 
-Set measurable targets for weeks 2, 6 and 12. Use week 12 as the final reporting checkpoint for your 90-day plan. Show how you would measure usage, usefulness and quality. Address your two biggest risks and explain what data teams can use and when a person needs to review AI output.
+Put measurable targets in the same table. Use week 12 as your final reporting checkpoint. Explain how you would measure usage, usefulness and quality, and what result would make you continue, change or stop the first initiative. Address your two biggest risks, including what data teams can use and when a person needs to review AI output.
 
 ### Module B. Make the investment decisions
 
 #### Management memo (10 points)
 
-Open MEMO.md with your recommendation to management and what you would deliver first. Keep the opening memo within 250 words. Summarize the expected impact and its uncertainty, adoption baseline and week-12 goal, vendor decision, top risks and two requests for support with owners and dates. Keep definitions and numbers consistent with the supporting work.
+Write the opening of MEMO.md as the message you would send to management (max 250 words). Given the CEO's two-week target, CS staffing and Security's review date, what can you commit to by week 2? Explain the tradeoff and how you would get the three stakeholders to a decision. Include your vendor recommendation, expected impact and uncertainty, adoption baseline and week-12 goal. Close with two specific requests, each with an owner and a date. Put the detailed calculations in the appendices.
 
 #### Vendor and portfolio decisions (15 points)
 
@@ -114,9 +110,7 @@ In Appendix B, total the build hours for selected work, including experiments, t
 
 #### Safe triage sample (20 points)
 
-Build a small, safe triage step using data/tickets.csv. Everyone works from the same technical brief. You decide whether triage belongs in your 90-day plan.
-
-The sample needs to meet these requirements.
+Build one step using data/tickets.csv that decides which tickets need a person and which may safely go to a model for labeling. A local script is enough. Everyone uses this sample, whatever they recommend in their plan.
 
 - Run with one offline command and no API key.
 - Account for every input row, identify duplicates and convert timestamps to UTC.
@@ -135,12 +129,10 @@ Write your own README.md using the submission guide, and complete AI_USAGE_TEMPL
 
 ## 5. How we evaluate
 
-We look for original opportunities tied to real work, a plan to sustain useful adoption, sound investment decisions and a small, reproducible prototype. Explain your assumptions, tradeoffs and safeguards so reviewers can follow your reasoning.
-
-Use synthetic data and placeholders for any credentials. Reviewers will check compliance with P1 and P2 and look for human control of consequential actions.
+We look for original ideas grounded in staff needs, sustained adoption, credible delivery commitments and sound investment decisions. In the prototype we check reproducibility, P1 and P2 compliance and human control of consequential actions. Use placeholders for credentials.
 
 ## 6. Submit and discuss
 
-Follow [SUBMISSION_GUIDE.md](SUBMISSION_GUIDE.md) for repository access and the final checklist. Send your own repository link to the recruiter. Do not submit a solution as a pull request to this test repository.
+Send your recruiter your own repository link using the [submission checklist](SUBMISSION_GUIDE.md#before-sending).
 
-If invited to a 60-minute interview, use your submission to brief staff, explain your decisions, make a small code change and adapt your plan to new information. You may use your usual development tools, including AI.
+If invited to a 60-minute interview, use your submission to brief staff in English, explain your decisions, make a small code or test change and respond to a stakeholder when a project goes off track. You may use your usual development tools, including AI.
