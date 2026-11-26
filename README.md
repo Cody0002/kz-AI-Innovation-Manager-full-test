@@ -19,7 +19,7 @@ Complete all three modules. They are parts of the same case. Use free or local t
 It’s Monday, 12 October 2026. You’ve joined a company that runs a real-money wallet app. Your work covers Customer Support (CS), Ops Analysts, Payments & Risk, VIP and Marketing.
 
 - **Customer Support** wants AI to help sort incoming tickets this month. The CS lead estimates it could save 45 hours a week.
-- **The CEO** wants a vendor called TriageGenie live in two weeks. The vendor claims 94% accuracy. CS can spare one agent for a pilot. Security can review the use of customer tickets in week 3. Until then, the team can test external tools only with synthetic tickets.
+- **The CEO** wants a vendor called TriageGenie live in two weeks. The vendor claims 94% accuracy. CS can spare one agent for a pilot. Security can review the use of customer tickets in week 3. In your plan, treat the supplied tickets as customer records. Before that review, external tests may use only invented examples created independently of those records.
 - **Teams** have submitted eight automation requests. Your team has a total of 160 build hours through 10 January 2027.
 - **Last month’s report** says 78% of staff use AI. The CEO wants all five teams to use AI safely and usefully every week by the end of the 90 days.
 
@@ -60,7 +60,7 @@ Use these four headings in `PLAN.md` (up to **800 words**, including tables).
 
 **1. What would you try first?**
 
-Propose two ideas beyond the eight requests, including one that helps multiple teams. For each, identify the users, problem, evidence or assumption, likely benefit, main risk and smallest useful test. How would you check these needs with staff and find others? Compare your ideas with the eight requests. Choose what to start and what to defer.
+Propose two ideas beyond the eight requests, including one that helps multiple teams. For each, explain who would benefit, what problem you see, what evidence or assumption you’re using, the likely benefit and the main risk. What’s the smallest test you’d run, and what result would justify taking the idea further? Explain how you’d check these needs with staff and find others. Compare your ideas with the eight requests and say what you’d start or defer. You can refer to the estimates in Appendix B.
 
 **2. How would you help people use AI?**
 
@@ -97,7 +97,7 @@ Use one row for each of the eight requests and your two ideas. Use these columns
 | Request or idea | Decision (90 days, later or decline) | AI’s role (none, assists or decides) | Weekly benefit | Build hours | Owner | Reason |
 |---|---|---|---|---|---|---|
 
-If a benefit is unknown, say how you’d check it.
+For each new idea, estimate the hours for its first experiment. Count those hours toward the 160 only if you select that experiment. If a benefit is unknown, say how you’d check it.
 
 Total the build hours for the work you select, including experiments, testing and integration. Include any work you committed to in `PLAN.md`. List training and support time separately, explain any changes to scope or estimates, and count each benefit once.
 

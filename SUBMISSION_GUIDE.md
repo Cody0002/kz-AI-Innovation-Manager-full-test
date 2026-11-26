@@ -21,7 +21,7 @@ your-submission/
   data/                   # The four original data files
 ```
 
-In `MEMO.md`, allow up to 250 words for the opening message and 150 words for Appendix A, excluding its cost table. Appendix B is the ten-row table described in [Module B](README.md#module-b-write-to-management). Estimate the first experiment for each new idea. Count the ones you select toward the 160 build hours.
+In `MEMO.md`, allow up to 250 words for the opening message and 150 words for Appendix A, excluding its cost table. Appendix B is the ten-row table described in [Module B](README.md#module-b-write-to-management).
 
 ## Module C output formats
 
@@ -73,4 +73,4 @@ Send the repository link to your recruiter. A private repository is preferred. G
 
 ## If you’re invited to interview
 
-Prepare a ten-minute briefing in English as if you were speaking to staff. Slides are optional. During the 60-minute conversation, we’ll discuss one of your ideas, make a small code or test change together and role-play a conversation about a delayed project. We’ll also ask about your leadership experience and leave time for your questions. You can use your usual tools, including AI.
+Prepare a ten-minute briefing in English as if you were speaking to staff. Slides are optional. During the 60-minute conversation, we’ll discuss one of your ideas, make a small code or test change together and role-play a conversation about a delayed project. Bring one example of an AI or automation rollout you led. We’ll ask what you decided, what you delegated and what happened after launch. There will be time for your questions. You can use your usual tools, including AI.

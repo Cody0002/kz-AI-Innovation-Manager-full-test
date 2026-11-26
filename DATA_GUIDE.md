@@ -1,6 +1,6 @@
 # Data Guide
 
-This case has four files. Keep the originals in `data/` and record any cleaning, exclusions or assumptions in `analysis/` and `FINDINGS.md`.
+This case has four files. Keep the originals in `data/`. In `FINDINGS.md`, say how you handled data issues that affect your conclusions. You can point to the relevant steps in your analysis or ticket-routing code.
 
 ## data/tickets.csv
 
