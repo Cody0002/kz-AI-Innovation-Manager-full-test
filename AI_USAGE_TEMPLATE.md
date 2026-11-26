@@ -1,17 +1,15 @@
-# AI usage
+# How I used AI and checked my work
 
-Save a copy as AI_USAGE.md. A few sentences per section are enough.
+Save this file as `AI_USAGE.md`. A few sentences for each section are enough.
 
-## 1. How you worked
+## 1. Did you use AI?
 
-If you used AI, name the tools and describe one suggestion you checked. Point to the file, row or calculation it affected. Explain what you kept, changed or rejected and why.
+If you did, name the tools and give one example of a suggestion you checked. Which file, row or calculation did it affect? Tell us what you kept or changed and why. If you worked without AI, just say so.
 
-If you worked without AI, write "I completed this exercise without AI assistance" and continue to section 2.
+## 2. How did you check a result?
 
-## 2. How you verified your work
+Pick one result from your submission. Give the command, manual check or comparison you used and what you found. Include enough detail for us to repeat it.
 
-Give a command, manual check or comparison you used to verify a result. State what you observed so a reviewer can repeat the check.
+## 3. What data did you share?
 
-## 3. Data handling
-
-If you used an external AI tool, describe what you shared from the synthetic case. Explain what you would protect when doing the same work with real company or customer data.
+If you used an external AI tool, tell us what you shared from this fictional case. Whether or not you used AI, explain what you would protect if you were doing the same work with real customer or company data.
